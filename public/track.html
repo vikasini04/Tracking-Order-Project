@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Shipment | ParcelTracker Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-shipping-fast"></i>
+            <span>ParcelTracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="track.html" class="active">Track</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="tracker-section">
+        <div class="container">
+            <h1>Track Your Shipment</h1>
+            <p>Enter your tracking ID to get real-time updates on your shipment</p>
+            
+            <div class="tracker-form">
+                <input type="text" id="tracking-id" placeholder="Enter your tracking ID (e.g. SW123456789IN)">
+                <button id="track-btn" class="btn primary">Track Shipment</button>
+            </div>
+            
+            <div id="tracking-result" class="tracking-result" style="display: none;">
+                <div class="tracking-header">
+                    <h2>Shipment Details</h2>
+                    <div class="tracking-status">
+                        <span id="status-text">In Transit</span>
+                        <span id="status-date">Updated: Today, 10:30 AM</span>
+                    </div>
+                </div>
+                
+                <div class="tracking-info">
+                    <div class="info-card">
+                        <h3>Origin</h3>
+                        <p id="origin">Mumbai, Maharashtra</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Destination</h3>
+                        <p id="destination">Delhi, Delhi</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Estimated Delivery</h3>
+                        <p id="est-delivery">Tomorrow, by 6:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Current Location</h3>
+                        <p id="current-location">Agra, Uttar Pradesh</p>
+                    </div>
+                </div>
+                
+                <div class="tracking-timeline">
+                    <h3>Shipment History</h3>
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Package Received</h4>
+                                <p>Mumbai, Maharashtra</p>
+                                <span>Oct 15, 2023, 9:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>In Transit</h4>
+                                <p>Left Mumbai Facility</p>
+                                <span>Oct 15, 2023, 2:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Arrived at Facility</h4>
+                                <p>Delhi Distribution Center</p>
+                                <span>Oct 16, 2023, 7:45 AM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Out for Delivery</h4>
+                                <p>With Delivery Agent</p>
+                                <span>Oct 16, 2023, 10:30 AM</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Delivered</h4>
+                                <p>Delhi, Delhi</p>
+                                <span>Expected: Oct 16, 2023, by 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tracking-map">
+                    <h3>Live Tracking Map</h3>
+                    <div id="map" style="height: 400px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SwiftShip Logistics</h3>
+                <p>Providing reliable logistics solutions across India since 2010.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track Shipment</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li>Express Delivery</li>
+                    <li>E-commerce Logistics</li>
+                    <li>Warehousing</li>
+                    <li>Cargo Services</li>
+                    <li>Supply Chain Solutions</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> A33 Spice Garden, Bangalore, Karnataka 400001</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@parceltracker.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ParcelTracker Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/tracker.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

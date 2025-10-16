@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | SwiftShip Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-shipping-fast"></i>
+            <span>ParcelTracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="track.html">Track</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="signin.html" class="active">Sign In</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form">
+                    <h1>Sign In</h1>
+                    <p>Welcome back! Please sign in to your account</p>
+                    
+                    <form id="signin-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn primary full-width">Sign In</button>
+                    </form>
+                    
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="social-auth">
+                        <button class="btn google-btn">
+                            <i class="fab fa-google"></i> Sign in with Google
+                        </button>
+                        <button class="btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                        </button>
+                    </div>
+                    
+                    <div class="auth-switch">
+                        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                    </div>
+                </div>
+                
+                <div class="auth-info">
+                    <div class="auth-info-content">
+                        <h2>Track Your Deliveries</h2>
+                        <p>Sign in to access your personalized dashboard and track all your shipments in real-time.</p>
+                        <div class="auth-info-image">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delivery Tracking">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SwiftShip Logistics</h3>
+                <p>Providing reliable logistics solutions across India since 2010.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="track.html">Track Shipment</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li>Express Delivery</li>
+                    <li>E-commerce Logistics</li>
+                    <li>Warehousing</li>
+                    <li>Cargo Services</li>
+                    <li>Supply Chain Solutions</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> A33 Spice Garden, Bangalore, Karnataka 400001</p>
+                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> info@parceltracker.in</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ParcelTracker Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
